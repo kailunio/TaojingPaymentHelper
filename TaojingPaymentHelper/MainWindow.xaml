@@ -1,0 +1,32 @@
+﻿<mah:MetroWindow x:Class="TaojingPaymentHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="淘金转账助手" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="504*"/>
+        </Grid.RowDefinitions>
+        <ToolBarPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="载入名单" Width="97" Margin="5" Click="ButtonOpenFileClick"/>
+            <Button Content="清空名单" Width="97" Margin="5"  Click="ButtonClearClick"/>
+            <CheckBox Content="浮在最上面" Margin="5" VerticalContentAlignment="Center" Checked="CheckBoxTopMostChecked"/>
+        </ToolBarPanel>
+        <ToolBarPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="编码" Margin="5" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cbEncoding" SelectedIndex="0" Width="97" Margin="5" VerticalContentAlignment="Center">
+                <ComboBoxItem Content="UTF-8" VerticalContentAlignment="Center"/>
+                <ComboBoxItem Content="GB2312" VerticalContentAlignment="Center"/>
+            </ComboBox>
+            <TextBlock Text="账号所在列" Margin="15, 5, 5, 5" VerticalAlignment="Center"/>
+            <mah:NumericUpDown x:Name="tbAccount"  Width="60" Margin="5" VerticalContentAlignment="Center" Value="1"/>
+            <TextBlock Text="金额所在列" Margin="15, 5, 5, 5" VerticalAlignment="Center"/>
+            <mah:NumericUpDown x:Name="tbPrice" Width="60" Margin="5" VerticalContentAlignment="Center" Value="1"/>
+        </ToolBarPanel>
+        <ScrollViewer Grid.Row="2">
+            <WrapPanel x:Name="panel" />
+        </ScrollViewer>
+    </Grid>
+</mah:MetroWindow>

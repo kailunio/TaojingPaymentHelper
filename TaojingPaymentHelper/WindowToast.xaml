@@ -1,0 +1,8 @@
+﻿<Window x:Class="TaojingPaymentHelper.WindowToast"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowToast" Height="40" Width="200" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="None">
+    <Grid>
+        <TextBlock x:Name="text"/>
+    </Grid>
+</Window>

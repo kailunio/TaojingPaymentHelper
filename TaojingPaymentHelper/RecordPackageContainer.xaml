@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="TaojingPaymentHelper.RecordPackageContainer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="326.042" d:DesignWidth="320.834" 
+             BorderThickness="4" Margin="3" Padding="3" Cursor="Hand">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="title" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="users" Grid.Row="1" Margin="2"/>
+        <TextBlock x:Name="prizes" Grid.Column="1" Grid.Row="1" Margin="2"/>
+    </Grid>
+</UserControl>
