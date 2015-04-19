@@ -28,11 +28,25 @@ namespace TaojingPaymentHelper {
         public List<Record> ReadRecordsFromFile(string file, Encoding encoding, int accountIndex, int priceIndex){
             var records = new List<Record>();
 
+            string lastQuoteLine = null;
             string[] lines = File.ReadAllLines(file, encoding);
             for (int i = 1; i < lines.Length; i++) {
-                string line = lines[i];
+                string line = lines[i].Trim();
                 if (line.IsEmpty()) {
                     continue;
+                }
+
+                // 如果以引号开头，那么这一行先不处理，等待下一个引号
+                if (line.StartsWith("\"")) {
+                    string currentQuoteLine = line.Substring(1);
+                    if (lastQuoteLine != null) {
+                        line = lastQuoteLine + currentQuoteLine;
+                        lastQuoteLine = null;
+                    }
+                    else {
+                        lastQuoteLine = currentQuoteLine;
+                        continue;
+                    }
                 }
 
                 string[] ss = line.Split(',');

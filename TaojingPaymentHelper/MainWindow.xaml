@@ -23,7 +23,7 @@
             <TextBlock Text="账号所在列" Margin="15, 5, 5, 5" VerticalAlignment="Center"/>
             <mah:NumericUpDown x:Name="tbAccount"  Width="60" Margin="5" VerticalContentAlignment="Center" Value="1"/>
             <TextBlock Text="金额所在列" Margin="15, 5, 5, 5" VerticalAlignment="Center"/>
-            <mah:NumericUpDown x:Name="tbPrice" Width="60" Margin="5" VerticalContentAlignment="Center" Value="1"/>
+            <mah:NumericUpDown x:Name="tbPrice" Width="60" Margin="5" VerticalContentAlignment="Center" Value="2"/>
         </ToolBarPanel>
         <ScrollViewer Grid.Row="2">
             <WrapPanel x:Name="panel" />

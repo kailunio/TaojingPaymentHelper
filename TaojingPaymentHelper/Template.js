@@ -13,8 +13,8 @@
         prizeIn.focus();
         accIn.val(acc);
         prizeIn.val(prize);
-        accIn.focus();
-        prizeIn.focus();
+        accIn.blur();
+        prizeIn.blur();
         this.count++;
     };
 };
